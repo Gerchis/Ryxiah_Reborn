@@ -48,3 +48,5 @@ func apply_gravity(delta: float):
 
 func update_snap_vector():
 	player.snap_vector = -player.get_floor_normal() if player.is_on_floor() else Vector3.ZERO
+
+

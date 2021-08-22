@@ -2,7 +2,8 @@ extends Node
 
 const MOUSE_SENSITIVITY = 0.1
 const GRAVITY = -40.0
-const MAX_CAM_ANGLE_Y = 70
-const MIN_CAM_ANGLE_Y = 20
-const MAX_CAM_ANGLE_X = -35
-const MIN_CAM_ANGLE_X = -55
+
+var max_cam_angle_y = INF
+var min_cam_angle_y = -INF
+var max_cam_angle_x = -45
+var min_cam_angle_x = -45

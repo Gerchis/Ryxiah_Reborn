@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/actors/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/object/camera/Camera.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Environment" id=1]
 
 [node name="TestWorld" type="Spatial"]
+
+[node name="CameraGimbal" parent="." instance=ExtResource( 2 )]
 
 [node name="Ground" type="CSGCombiner" parent="."]
 use_collision = true
@@ -12,6 +15,9 @@ collision_layer = 32
 
 [node name="CSGBox" type="CSGBox" parent="Ground"]
 transform = Transform( 50, 0, 0, 0, 27.7, 0, 0, 0, 50, 0, -28.0238, 0 )
+
+[node name="CSGBox2" type="CSGBox" parent="Ground"]
+transform = Transform( 50, 0, 0, 0, -1.2108e-06, -50, 0, 27.7, -2.18557e-06, 0, -1.0238, -77 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
